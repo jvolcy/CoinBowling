@@ -1,0 +1,218 @@
+Scene 1
+=======
+
+Exercise #1: Create a layered scene
+* download assets (provide attributions)
+* assemble in layers
+* must have at least 4 layers
+* One of the middle layers must the a “player” layer.  The player should be manually translatable over the scene.
+* must not aesthetically distort images
+* sum the size of the scene in bytes (for small screens, 100kb is reasonable.  For the average laptop, <500kb is reasonable)
+
+
+Click on the hiker.  Then, in the inspector, change his X-position.  If the scene is properly layered, the hiker will glide behind the tree on the left and the tall grass, but will be above everything else in the scene.
+Also, if the scene is properly layered, it will retain proper layering after unloading and reloading it.  Scenes that are not properly layered may or may not retain this order.
+
+Exercise #2: First Script - Translation
+Write a script that automates the movement of the player.
+
+
+Scene 2
+=======
+
+Exercise #3: Object parenting / Rotation
+Use parenting to create a multi-part object: car and wheel, fan, wheelbarrow or bicycle.
+Write a script to rotate the movable part of your model.
+
+Exercise #4
+H/W: Write a pair of scripts to animate the helicopter.  The first script must rotate the helicopter's rotor.  The second script must translate the helicopter from the bottom of the screen to the top.  Your application should have a background image.
+
+
+Translate X and Y vs Forward and Up
+
+Introduce user input: allow the player to move the helicopter left and right with the keyboard.
+
+
+Scene 3
+=======
+Using parenting & rotation to create a pivot joint
+
+
+
+Scene 4
+=======
+Tilemap
+
+
+The tile sets here are modifications of the tile sets found here:
+Source: https://opengameart.org/content/tiny-16-basic
+
+There are 2 tilesets.  The basic_16x16 tileset contains the "static" (un-animated) tiles used to create the 2 example tilemaps.  The full_16x16 tileset is a superset of the basic_16x16 set.  It adds animated character tiles.
+
+
+The process of creating a tilemap is involved.  It may be best to provide a unity package with the tiles already configured along with how-to instructions for students to follow.
+
+The process is as follows:
+1) find and download a sprite sheet
+2) slice the sprite sheet to create a set of sprites
+3) create a pallet
+4) Open the Tile Palette window and add the sprites from step 2 to the pallet created in step 3.  This generates the tile assets.
+
+We are now ready to use the tiles.  Everything up to here can be in the unity package
+5) create a tilemap.
+6) Use the tiles on the palette to create a scene.
+
+Exercise #5
+Design a level using the provided tilesets. Your level must include a player.  This will require at least 2 tilemaps on two sorting layers (one for the background and one for the player).
+
+
+
+
+Scene 5
+=======
+Art packages and simple animations with animation clips.
+An art package will contain tiles, assets and animation frames that can be assembled to form an animation clip.  The package may also contain sound and other assets.
+
+
+An example 2D platformer tilemap
+Pixel Art Platformer - Village Props
+By Cainos
+https://assetstore.unity.com/packages/2d/environments/pixel-art-platformer-village-props-166114
+
+
+An example top-down isometric tilemap:
+Pixel Art Top Down - Basic
+By Cainos
+https://assetstore.unity.com/packages/2d/environments/pixel-art-top-down-basic-187605
+
+
+Exercise #6
+Use one of these art packages to design a level.  It should include some animated feature and both tile and sprite assets.  Be creative.
+
+User Input (GetKey() up, down, left and right)
+Exercis #7
+Add a controllable player to the scene created in Exercise #6 (Scene5 h/w).
+The scene should be layered.  The player moves in front of some sprites, behind others but is blocked by others.
+The player in this exercise can be a simple capsule.
+
+
+
+
+================================
+Scene 6
+=======
+First game: Missle Interceptor
+
+Incoming missiles are falling on the city.  Move the shield left and right to protect the city.  Maybe the population drops with each strike.
+Maybe the center of the city is more densely populated than the burbs... missiles that target the center do more damage.
+
+
+
+Apples randomly fall from a tree. Some are good, some are bad.  Catch the good, avoid the bad.
+
+Demonstrate the game.  Now talk about what is needed to create it.
+1) move the interceptor left and right (don't fall off the screen)
+2) vertical scroller: bombs need to keep scrolling
+3) random positioning: need to place bombs at random places
+4) collision detection: need to be able to detect when we intercept a bomb
+
+
+
+Exercise #8 Vertical and Horizontal Scrollers / limits
+Write a script (in class) to implement a vertical scroller on an incoming missile.
+H/W: Exercise #9a --> create a horizontal scroller for the player (interceptor)
+Exercise #9b --> instead of scrolling, limit the player's motion to the screen.
+
+Discussion on
+
+
+Scene 7a
+========
+Animation
+
+
+Scene 7b
+========
+Animation
+
+"poof" Animation: http://www.derickrivas.com/hook-king
+Lion sprite sheet: https://rpgtileset.com/sprite/lions-sprite-for-rpg-maker-mv/
+
+
+Scene 8b
+========
+deltaTime
+This doesn't work yet... need a way to show the importance/need for Time.deltaTime
+
+
+Scene 10
+========
+Gravity & Colliders
+
+Real-life objects have a shape, boundary and mass.  For real objects, shape and boundary are the same and an object's mass is completely contained w/in the boundary of the object.  For 2D game objects, these are 3 distinct properties.
+In 2D objects, the shape is defined by the object's sprite.  The boundary is defined by a collider.  The mass is a defined by a rigid body.  The mass is concentrated in a single point not necessarily w/in the boundary of the object.
+
+Create a simple scene containing only a ball.  Nothing happens when the scene runs.
+Now add a rigid body to the ball and observe gravity at work.
+Add a floor --> ball falls right through
+Add colliders --> seems to work properly
+Tilt the floor --> ball rolls off
+Add a couple of obstacles --> ball bounces off (they don't have colliders)
+Add colliders --> ball strikes objects and knocks them down.
+
+Experiment with Scene 6.  Change the boundary of the ball and observe the results.  Change the sprite and observe the result.
+
+
+Exercise #8
+Fix exercise #7 such that the player is subject to gravity and cannot walk through  and floors and walls and other objects.  If you chose a platform game, have the player start at an elevated platform and fall down to a lower platform.
+
+
+
+Example character sheet
+https://www.nicepng.com/ourpic/u2w7w7t4u2i1y3w7_sprite-sheet-and-animation-slice-doubt-unity-answers/
+
+
+Scene 9c
+========
+Vector
+
+Get a picture of a car (car should face right).
+We have been using transform.Translate(x, y, z) to move the car forward.  What happens if the car is on an incline?
+(x, y, z) constitutes a vector.
+
+Up until now, we have been moving objects on the screen with the transform.Translate() function by providing x, y values (in 2D, z is optional).
+This is fine, but we can define a direction with a vector, then use the vector to move the object.
+
+So, instead of
+transform.Translate(1f, 0f, 0f);
+
+we can do the following:
+
+Vector2 dir = new Vector2(1f, 0f, 0f);
+transform.Translate(dir);
+
+Vectors are scalable.
+
+Vector2 dir = new Vector2(1f, 0f, 0f);
+transform.Translate(5f * dir);
+will move the GO 5X farther in the same direction.
+
+transform.Translate(-1 * dir);
+will move us in the opposite (180 degrees) direction.
+
+
+There are some pre-defined vectors
+or, we can use the built-in Vector2.right:
+
+Vector2 dir = new Vector2(0.05f, 0f);
+transform.Translate(0.05f * Vector2.right);
+
+Note that because Vector2.right is a unit vector, it is trivial to scale it.
+
+Vectors can be used to add forces to rigid bodies.
+
+
+-------------------
+Shape/Boundary/Mass
+
+

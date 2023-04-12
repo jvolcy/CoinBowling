@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: Assets/Scenes/SampleScene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 0
+    path: Assets/Scenes/Scene0 - Simple Game.unity
+    guid: d9a5345b0362b4c2e8d933aa16a578c8
+  - enabled: 0
+    path: Assets/Scenes/Scene1 - Layers.unity
+    guid: 47fd8cb54be4f4dcbbf530c1a64177ee
+  - enabled: 0
+    path: Assets/Scenes/Scene2a - Rotation 1.unity
+    guid: bea2183abe89246589b1182d770d2f84
+  - enabled: 0
+    path: Assets/Scenes/Scene2b - Helicopter.unity
+    guid: c6903ac3861684c9880053e46b18cf43
+  - enabled: 0
+    path: Assets/Scenes/Scene3 - Pivots.unity
+    guid: 4f4b2fbca69444d16a189714303f898f
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: Assets/Scenes/Scene7b/Scene7b.unity
+    guid: 70d6cdcec3e9545eeb76179aa2349bf5
+  - enabled: 0
+    path: Assets/Scenes/Scene7c - Animated Tilemap/Scene7c - Animated Tilemap.unity
+    guid: ace509040774e4d00965598d68e0347d
+  - enabled: 0
+    path: Assets/Scenes/Scene9b - Apple Drop/Scene9b - Apple Drop.unity
+    guid: 9a4bc9539c2794c889424242f0126fce
+  - enabled: 0
+    path: Assets/Scenes/CoinBowling2/CoinBowling2.unity
+    guid: 5f542c423007846518384f28f6678fa7
+  - enabled: 0
+    path: Assets/Scenes/Auction/Auction.unity
+    guid: c6574cf1935084c8183c2121d50704ba
+  - enabled: 1
+    path: Assets/Scenes/Auction2/Auction2.unity
+    guid: 2101ba7ce89254826b7aac5c69981ade
+  m_configObjects: {}
